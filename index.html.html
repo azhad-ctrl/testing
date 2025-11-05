@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Confession</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #000011 0%, #000033 100%);
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: blink 2s infinite ease-in-out;
+            z-index: -1;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        #special-message {
+            font-size: 32px;
+            color: #ffffff;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4, 0 0 20px #ff69b4;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        #love-button {
+            font-size: 64px;
+            background: transparent;
+            color: #ff69b4;
+            border: none;
+            padding: 30px 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            position: relative;
+            z-index: 1;
+        }
+        #love-button:hover {
+            transform: scale(1.1);
+        }
+        #love-button.sink {
+            animation: sink 1s ease-in-out forwards;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes sink {
+            0% { transform: translateY(0px) scale(1); opacity: 1; }
+            100% { transform: translateY(50px) scale(0.5); opacity: 0; }
+        }
+        #letter {
+            display: none;
+            margin-top: 30px;
+            font-size: 28px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333333;
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid #cccccc;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        #letter.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slides-container {
+            display: flex;
+            width: 300%; /* 3 slides */
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .nav-button {
+            font-size: 18px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+        .nav-button:hover {
+            background: #ff1493;
+        }
+        .nav-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        #letter p {
+            font-family: 'Nunito', sans-serif; /* Easy-to-read font for the letter text */
+            font-size: 20px; /* Slightly smaller for better readability */
+            line-height: 1.6; /* Improved line spacing */
+            margin: 15px 0; /* Spacing between paragraphs */
+        }
+        .aesthetic-question {
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            color: #ff69b4;
+            text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-container"></div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div id="special-message">A special message for you</div>
+        <button id="love-button">❤️</button>
+        <div id="letter">
+            <div class="slides-container" id="slides">
+                <div class="slide">
+                    <p>Dear Dhaniya,</p>
+                    <p>i never really had an idea answer if I were ask what love is. but then, you cross my mind. for me love is everything you do, even in your darkest day. I never thought i would love someone this much, too profound and too deep but you and your entire existence make it possible. It is also a love that makes me worry when you’re not in your usual self. a love that causes me much more pain whenever you’re hurting.having this kind of feeling for you must be on of most beautiful things that ever happen to me. it feels dreamy because it’s you and i’m glad it’s you.</p>
+                </div>
+                <div class="slide">
+                    <p> i won’t let you look for a better one cause i will endlessly try my hardest to become the very best version of myself for you. i promise to keep growing, to become the person you deserve because loving you means becoming better every single day. your beauty, both inside and out never fails to captivate me. your kindness, your soul are just some of many things that make me fall in love with you over and over again.thank youu for being the most amazing person in my life sayang. i don’t know how to describe you but for all the days that you made me feel loved and appreciated, i am out of words to tell you how grateful i am to have you here 🤍.</p>
+                </div>
+                <div class="slide">
+                    <br>
+		    <br>
+		    <br>
+                    <p class="aesthetic-question">So, can I be your boyfriend?</p>
+                    <p>sincerely, Azhad Irfan.</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-button" id="prev-btn" disabled>Previous</button>
+                <button class="nav-button" id="back-btn">Back</button>
+                <button class="nav-button" id="next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to create random stars
+        function createStars(numStars) {
+            const container = document.getElementById('stars-container');
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 1; // Random size between 1-4px
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                // Random delay for blinking to make it more aesthetic
+                star.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(star);
+            }
+        }
+
+        // Create 500 random stars (adjust number as needed)
+        createStars(500);
+
+        // Slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slidesContainer = document.getElementById('slides');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const backBtn = document.getElementById('back-btn');
+
+        function updateSlides() {
+            slidesContainer.style.transform = `translateX(-${currentSlide * 33.33}%)`; // 3 slides, so 33.33% each
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+            if (currentSlide === slides.length - 1) {
+                nextBtn.style.display = 'none'; // Hide next on last slide
+            } else {
+                nextBtn.style.display = 'inline-block';
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        });
+
+        backBtn.addEventListener('click', function() {
+            const button = document.getElementById('love-button');
+            const letter = document.getElementById('letter');
+            letter.classList.remove('show');
+            setTimeout(() => {
+                letter.style.display = 'none';
+                button.style.display = 'block';
+                button.classList.remove('sink');
+                button.style.transform = 'scale(1)'; // Reset scale
+                button.style.opacity = '1'; // Reset opacity
+                // Reset slides to first
+                currentSlide = 0;
+                updateSlides();
+            }, 500);
+        });
+
+        document.getElementById('love-button').addEventListener('click', function() {
+            const button = document.getElementById('love-button');
+            const letter = document.getElementById('letter');
+            button.classList.add('sink');
+            setTimeout(() => {
+                button.style.display = 'none';
+                letter.style.display = 'block';
+                setTimeout(() => letter.classList.add('show'), 10);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
